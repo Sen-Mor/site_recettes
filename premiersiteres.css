@@ -1,0 +1,196 @@
+/*
+--> "padding" permet de définir l'espace à l'intérieur d'un
+    élément, entre son contenu et sa bordure.
+
+--> "margin" ajoute de l'espace à l'extérieur de l'élément
+
+--> "width" est utilisée pour définir la largeur d'un élément.
+
+--> "height" est utilisée pour définir la hauteur d'un élément.
+
+--> "border" en CSS est utilisée pour définir les bordures autour d'un élément
+
+--> display en CSS est une des plus fondamentales et les plus importantes 
+    pour contrôler la mise en page d'un site web. Elle détermine comment 
+    un élément est affiché dans le document et s'il prend de l'espace 
+    dans la mise en page
+
+    -> "block" : Rend l'élément un élément de bloc. Il occupe toute 
+        la largeur disponible, et commence sur une nouvelle ligne.
+
+    -> inline : Rend l'élément un élément en ligne. Il n'occupe que 
+        la largeur nécessaire pour son contenu et ne commence pas sur 
+        une nouvelle ligne.
+
+    -> "inline"-block : Rend l'élément comme un élément en ligne, mais 
+        permet de définir des propriétés de largeur et de hauteur.
+*/
+*{
+    overflow: auto;
+}
+
+body{
+    background-color: #8BA1BB;
+    font-family: Arial;
+    margin: 0;
+}
+div.corps{
+    background-color: whitesmoke;
+    margin: 40px 8px 40px 8px;
+    padding: 0px 30px 30px 30px;
+    box-shadow: 1px 1px 10px 1px;
+    overflow: visible;
+}
+h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+p.description{
+    text-align: center;
+    max-width: 400px;
+    display: inline-block;
+    font-size: 14px;
+
+}
+.center{
+    text-align: center;
+    width: 100%;
+}
+p.categorie{
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+    margin-top: -15px;
+    margin-bottom: 0px;  
+    padding: 8px 18px;
+    display: inline-block;
+    font-size: 16px;
+}
+div.categorie{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    overflow: visible;
+}
+div.separateur{
+    width: 100px;
+    height: 1px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.info{
+    position: relative;
+}
+table.info{
+    width: 100%;
+    bottom: 0;
+    color: #ffffff;
+    background-color: #6C829DC0;
+    height: 40px;
+    position: absolute;
+    
+}
+table.info td{
+    font-size: 12px;
+    text-align: center;
+    vertical-align: top;
+}
+table.info th{
+    font-size: 14px;
+    vertical-align: bottom;
+}
+img.info{
+    max-height: 400px;
+    object-fit: cover;
+    min-height: 200px;
+    background-color: gray;
+}
+div.colone{
+    width: 100%;
+    margin-top: 20px;
+}
+
+div.colone h2{
+    border-bottom: 5px solid #6C829D;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+
+}
+div.colone1{
+    
+    display: inline-block;
+}
+div.ingredient p{
+    border:1px solid lightgray;
+    text-align: center;
+    padding: 8px 0px;
+    margin-top: 4px;
+    margin-bottom: 0px;    
+}
+table.preparation p.numero{
+    background-color: #6C829D;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 4px;
+    box-sizing: border-box;
+    border-radius: 50%; /*pour arrondir les carres*/
+    text-align: center;
+    margin: 0;
+}
+table.preparation td{
+    vertical-align: top;
+}
+table.preparation td.preparation_etape{
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+table.preparation tr{
+    height: 50 px;
+}
+
+/*Pour Ordinateur*/
+@media only screen and (min-width: 768px) {
+    div.corps{
+        min-width: 350px;
+        margin: 60px 10% 40px 10%;
+        padding: 0px 30px 30px 30px;
+        box-shadow: 1px 1px 10px 1px;
+        overflow: visible;
+    }
+    table.info{
+        height: 80px;        
+    }
+    table.info td{
+        font-size: 14px;
+    }
+    table.info th{
+        font-size: 16px;
+    }
+    div.colone{
+        width: 45%;
+        margin-top: 20px;
+    }
+    div.colone1{
+        
+        display: inline-block;
+        margin-right: 10%;
+    }
+    div.colone2{
+        float: right;
+    }
+}
+@media only screen and (min-width: 900px){
+    div.corps{
+        margin-left: auto;
+        margin-right: auto;
+        width: 645px;
+    }
+}
